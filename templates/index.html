@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BRADE AI</title>
+
+<link rel="stylesheet" href="static/css/styles.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- LEFT PANEL -->
+    <div class="sidebar">
+        <h2>⚡ BRADE Intelligence</h2>
+
+        <div class="menu-btn"><i class="fas fa-cloud"></i> Weather</div>
+        <div class="menu-btn"><i class="fas fa-bell"></i> Reminder</div>
+        <div class="menu-btn"><i class="fas fa-calendar"></i> Meeting</div>
+        <div class="menu-btn"><i class="fas fa-microphone"></i> Voice</div>
+    </div>
+
+    <!-- CENTER -->
+    <div class="center">
+        <div class="orb"></div>
+
+        <p id="voiceResponse" class="status">Click mic to start...</p>
+
+        <button class="mic-btn" onclick="startVoiceAssistant()">
+            <i class="fas fa-microphone"></i>
+        </button>
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="right">
+
+        <h2>✨ Quick Actions</h2>
+
+        <!-- WEATHER -->
+        <div class="card">
+            <input id="city" placeholder="Enter city">
+            <button class="action-btn" onclick="getWeather()">🌤 Weather</button>
+            <div id="weatherResponse" class="response"></div>
+        </div>
+
+        <!-- REMINDER -->
+        <div class="card">
+            <input id="reminder_input" placeholder="Set reminder">
+            <button class="action-btn" onclick="setReminder()">⏰ Set</button>
+            <div id="reminderResponse" class="response"></div>
+        </div>
+
+        <!-- MEETING -->
+        <div class="card">
+            <input id="meeting-command" placeholder="Meeting">
+            <input id="meeting-description" placeholder="Description">
+            <input id="meeting-location" placeholder="Location">
+            <button class="action-btn" onclick="scheduleMeeting()">📅 Schedule</button>
+            <div id="meetingResponse" class="response"></div>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="static/js/scripts.js"></script>
+
+</body>
+</html>
